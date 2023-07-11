@@ -112,7 +112,7 @@ class Attachment extends IdModel {
    * Get a signed URL with the default expirt to download the attachment from storage.
    */
   get signedUrl() {
-    return getSignedUrl(this.key);
+    return getSignedUrl(encodeURI(this.key));
   }
 
   // hooks
